@@ -11,6 +11,9 @@ body {
 .history-container {
     max-width: 900px;
     margin: 50px auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .history-title {

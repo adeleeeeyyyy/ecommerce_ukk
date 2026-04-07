@@ -6,7 +6,7 @@
 
     <h2 class="checkout-title">Data Pengiriman 🚚</h2>
 
-    <form action="{{ route('checkout.process') }}" method="GET">
+    <form action="{{ route('checkout.process') }}" method="POST">
         @csrf
 
         <input type="hidden" name="final_total" value="{{ $total }}">
@@ -170,6 +170,7 @@
     border-radius: 10px;
     border: 1px solid #fce4ec;
     outline: none;
+    box-sizing: border-box;
 }
 
 /* TOTAL */
@@ -201,19 +202,33 @@
 
     .checkout-container {
         padding: 20px;
-        margin: 20px;
+        margin: 20px auto;
+        width: 90%;
+        box-sizing: border-box;
     }
 
-
-
     .order-item {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .order-item img {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+    }
+
+    .info {
+        flex: 1;
+        min-width: 120px;
     }
 
     .price {
         width: 100%;
         text-align: right;
+        margin-top: 5px;
+        font-size: 14px;
     }
 }
 </style>

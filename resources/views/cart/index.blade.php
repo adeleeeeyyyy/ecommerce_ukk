@@ -243,22 +243,35 @@
 @media (max-width: 768px) {
 
     .cart-item {
-        flex-direction: column;
-        align-items: stretch; /* 🔥 jangan flex-start */
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .product-image {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
     }
 
     .product-info {
         text-align: left;
+        flex: 1;
+        min-width: 120px;
     }
 
     .qty-wrapper {
-        justify-content: center;
+        margin-left: auto;
     }
 
     .subtotal {
+        width: 100%;
         text-align: right;
         font-size: 16px;
         font-weight: bold;
+        padding-top: 10px;
+        border-top: 1px dashed #fce4ec;
     }
 }
 
