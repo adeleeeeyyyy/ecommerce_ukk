@@ -119,6 +119,7 @@
     margin-bottom: 15px;
     border: 1px solid #fce4ec;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
 }
 
 /* IMAGE */
@@ -128,6 +129,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: #fdf2f4;
+     flex: 0 0 80px;
 }
 
 .product-image img {
@@ -141,6 +143,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-width: 150px;
 }
 
 .product-info span {
@@ -156,6 +160,7 @@
     border-radius: 25px;
     padding: 5px 10px;
     gap: 10px;
+    flex: 0 0 auto;
 }
 
 .qty-btn {
@@ -188,6 +193,8 @@
     min-width: 120px;
     font-weight: bold;
     color: #d8a7b1;
+    flex: 0 0 auto;
+    text-align: right;
 }
 
 /* TOTAL */
@@ -235,52 +242,23 @@
 /* HP */
 @media (max-width: 768px) {
 
-    .cart-container {
-        padding: 15px;
-        border-radius: 15px;
-    }
-
-    .cart-title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
     .cart-item {
-        flex-direction: column; /* 🔥 penting */
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .product-image {
-        width: 70px;
-        height: 70px;
+        flex-direction: column;
+        align-items: stretch; /* 🔥 jangan flex-start */
     }
 
     .product-info {
-        width: 100%;
+        text-align: left;
     }
 
     .qty-wrapper {
-        width: 100%;
         justify-content: center;
     }
 
     .subtotal {
-        width: 100%;
         text-align: right;
-    }
-
-    .item-checkbox {
-        align-self: flex-start;
-    }
-
-    .cart-total {
-        padding: 15px;
-    }
-
-    .checkout-btn {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
     }
 }
 
